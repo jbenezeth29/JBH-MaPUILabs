@@ -1,0 +1,34 @@
+<div class="patients-container">
+
+  <ng-container *ngFor="let patient of patients">
+    <app-patient (refrechList)="refrechList()" [patient]="patient"></app-patient>
+  </ng-container>
+
+
+  <form class="add-patient-form" (ngSubmit)="addPatient()" [formGroup]="patientForm">
+    <mat-form-field  appearance="fill">
+      <mat-label>First Name</mat-label>
+      <input type="text" id="firstName" class="form-control" formControlName="firstName" matInput>
+    </mat-form-field>
+
+    <mat-form-field  appearance="fill">
+      <mat-label>Last Name</mat-label>
+      <input type="text" id="lastName" class="form-control" formControlName="lastName" matInput>
+    </mat-form-field>
+
+    <mat-form-field  appearance="fill">
+      <mat-label>Age</mat-label>
+      <input type="text" id="age" class="form-control" formControlName="age" matInput>
+    </mat-form-field>
+
+    <mat-form-field  appearance="fill">
+      <mat-label>Sex</mat-label>
+      <input type="text" id="sex" class="form-control" formControlName="sex" matInput>
+    </mat-form-field>
+  <button mat-button type="submit">Ajouter</button>
+  </form>
+</div>
+
+<!--<mat-nav-list>-->
+<!--  <a mat-list-item href="..." *ngFor="let patient of patients"> {{ patient.lastName }} </a>-->
+<!--</mat-nav-list>-->

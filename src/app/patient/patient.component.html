@@ -1,0 +1,24 @@
+
+<form class="add-patient-form" (ngSubmit)="patchPatient()" [formGroup]="patientForm">
+  <mat-form-field  appearance="fill">
+    <mat-label>First Name</mat-label>
+    <input type="text" id="firstName" class="form-control" formControlName="firstName" matInput>
+  </mat-form-field>
+
+  <mat-form-field  appearance="fill">
+    <mat-label>Last Name</mat-label>
+    <input type="text" id="lastName" class="form-control" formControlName="lastName" matInput>
+  </mat-form-field>
+
+  <mat-form-field  appearance="fill">
+    <mat-label>Age</mat-label>
+    <input type="text" id="age" class="form-control" formControlName="age" matInput>
+  </mat-form-field>
+
+  <mat-form-field  appearance="fill">
+    <mat-label>Sex</mat-label>
+    <input type="text" id="sex" class="form-control" formControlName="sex" matInput>
+  </mat-form-field>
+  <button mat-button type="submit">Modifier</button>
+</form>
+<button mat-button (click)="removePatient()">Supprimer</button>
