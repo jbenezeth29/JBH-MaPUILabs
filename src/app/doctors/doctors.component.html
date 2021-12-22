@@ -1,0 +1,25 @@
+<div class="doctors-container">
+
+  <ng-container *ngFor="let doctor of doctors">
+    <app-doctor (refrechList)="refrechList()" [doctor]="doctor"></app-doctor>
+  </ng-container>
+
+  <form class="add-doctor-form" (ngSubmit)="addDoctor()" [formGroup]="doctorForm">
+    <mat-form-field  appearance="fill">
+      <mat-label>First Name</mat-label>
+      <input type="text" id="firstName" class="form-control" formControlName="firstName" matInput>
+    </mat-form-field>
+
+    <mat-form-field  appearance="fill">
+      <mat-label>Last Name</mat-label>
+      <input type="text" id="lastName" class="form-control" formControlName="lastName" matInput>
+    </mat-form-field>
+
+    <mat-form-field  appearance="fill">
+      <mat-label>Speciality</mat-label>
+      <input type="text" id="Speciality" class="form-control" formControlName="speciality" matInput>
+    </mat-form-field>
+
+    <button mat-button type="submit">Ajouter</button>
+  </form>
+</div>

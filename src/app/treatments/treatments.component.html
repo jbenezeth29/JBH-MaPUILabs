@@ -1,0 +1,25 @@
+<div class="treatment-container">
+
+  <ng-container *ngFor="let treatment of treatments">
+    <app-treatment (refrechList)="refrechList()" [treatment]="treatment"></app-treatment>
+  </ng-container>
+
+  <form class="add-treatment-form" (ngSubmit)="addTreatment()" [formGroup]="treatmentForm">
+    <mat-form-field  appearance="fill">
+      <mat-label>Start Date</mat-label>
+      <input type="date" id="startDate" class="form-control" formControlName="start" matInput>
+    </mat-form-field>
+
+    <mat-form-field  appearance="fill">
+      <mat-label>End Date</mat-label>
+      <input type="date" id="endDate" class="form-control" formControlName="end" matInput>
+    </mat-form-field>
+
+    <mat-form-field  appearance="fill">
+      <mat-label>Text</mat-label>
+      <input type="text" id="text" class="form-control" formControlName="text" matInput>
+    </mat-form-field>
+
+    <button mat-button type="submit">Ajouter</button>
+  </form>
+</div>

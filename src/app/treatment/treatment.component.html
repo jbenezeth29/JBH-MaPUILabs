@@ -1,0 +1,20 @@
+{{treatment | json}}
+<form class="add-treatment-form" (ngSubmit)="patchTreatment()" [formGroup]="treatmentForm">
+  <mat-form-field  appearance="fill">
+    <mat-label>Start Date</mat-label>
+    <input type="date" id="start" class="form-control" formControlName="start" matInput>
+  </mat-form-field>
+
+  <mat-form-field  appearance="fill">
+    <mat-label>End Date</mat-label>
+    <input type="date" id="end" class="form-control" formControlName="end" matInput>
+  </mat-form-field>
+
+  <mat-form-field  appearance="fill">
+    <mat-label>Text</mat-label>
+    <input type="text" id="text" class="form-control" formControlName="text" matInput>
+  </mat-form-field>
+
+  <button mat-button type="submit">Modifier</button>
+</form>
+<button mat-button (click)="removeTreatment()">Supprimer</button>

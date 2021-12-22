@@ -13,12 +13,20 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatInputModule} from "@angular/material/input";
 import {ReactiveFormsModule} from "@angular/forms";
 import { AppRoutingModule } from './app-routing.module';
+import {DoctorsComponent} from "./doctors/doctors.component";
+import { DoctorComponent } from './doctor/doctor.component';
+import { TreatmentComponent } from './treatment/treatment.component';
+import { TreatmentsComponent } from './treatments/treatments.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PatientsComponent,
-    PatientComponent
+    PatientComponent,
+    DoctorsComponent,
+    DoctorComponent,
+    TreatmentComponent,
+    TreatmentsComponent
   ],
   imports: [
     HttpClientModule,

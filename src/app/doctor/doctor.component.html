@@ -1,0 +1,20 @@
+
+<form class="add-doctor-form" (ngSubmit)="patchDoctor()" [formGroup]="doctorForm">
+  <mat-form-field  appearance="fill">
+    <mat-label>First Name</mat-label>
+    <input type="text" id="firstName" class="form-control" formControlName="firstName" matInput>
+  </mat-form-field>
+
+  <mat-form-field  appearance="fill">
+    <mat-label>Last Name</mat-label>
+    <input type="text" id="lastName" class="form-control" formControlName="lastName" matInput>
+  </mat-form-field>
+
+  <mat-form-field  appearance="fill">
+    <mat-label>speciality</mat-label>
+    <input type="text" id="speciality" class="form-control" formControlName="speciality" matInput>
+  </mat-form-field>
+
+  <button mat-button type="submit">Modifier</button>
+</form>
+<button mat-button (click)="removeDoctor()">Supprimer</button>

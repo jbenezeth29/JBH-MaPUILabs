@@ -1,12 +1,9 @@
-import {Injectable} from "@angular/core";
+import {Injectable, OnInit} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
 import {Patient} from "../patient/patient";
-import {Observable} from "rxjs";
 
 @Injectable()
 export class PatientsService {
-  patients: Patient[] | undefined;
-
   constructor( private httpClient: HttpClient) {}
   getPatients(){
     return this.httpClient.get<Patient[]>('api/patients');

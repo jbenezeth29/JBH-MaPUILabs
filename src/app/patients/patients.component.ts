@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {PatientsService} from "../services/patients.service";
 import {Patient} from "../patient/patient";
-import {FormGroup,FormBuilder, NgForm} from "@angular/forms";
-import {Observable} from "rxjs";
+import {FormGroup,FormBuilder} from "@angular/forms";
+
 
 @Component({
   selector: 'app-patients',
@@ -12,12 +12,10 @@ import {Observable} from "rxjs";
 export class PatientsComponent implements OnInit {
   patients: Patient[] = [];
   patientForm!: FormGroup;
-  patientsTest$: Observable<Patient[]> | undefined;
 
   constructor(private patientsService: PatientsService,private formBuilder: FormBuilder ) { }
 
   ngOnInit(): void {
-    this.patientsTest$ = this.patientsService.getPatients()
     this.refrechList();
     this.initForm();
   }
