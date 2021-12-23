@@ -1,7 +1,7 @@
 <div class="patients-container">
 
   <ng-container *ngFor="let patient of patients">
-    <app-patient (refrechList)="refrechList()" [patient]="patient"></app-patient>
+    <app-patient (refrechList)="refrechList()" [patient]="patient" [treatments]="treatments"></app-patient>
   </ng-container>
 
   <form class="add-patient-form" (ngSubmit)="addPatient()" [formGroup]="patientForm">
@@ -24,6 +24,14 @@
       <mat-label>Sex</mat-label>
       <input type="text" id="sex" class="form-control" formControlName="sex" matInput>
     </mat-form-field>
-  <button mat-button type="submit">Ajouter</button>
+
+    <ng-container *ngFor="let treatment of treatments">
+      <label>
+        <input type="checkbox" [value]="treatment._id" (change)="onCheckboxChange($event)">
+        {{treatment.text}}
+      </label>
+    </ng-container>
+
+    <button mat-button type="submit">Ajouter</button>
   </form>
 </div>

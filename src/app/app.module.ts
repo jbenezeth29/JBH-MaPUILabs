@@ -17,6 +17,7 @@ import {DoctorsComponent} from "./doctors/doctors.component";
 import { DoctorComponent } from './doctor/doctor.component';
 import { TreatmentComponent } from './treatment/treatment.component';
 import { TreatmentsComponent } from './treatments/treatments.component';
+import {MatCheckboxModule} from "@angular/material/checkbox";
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { TreatmentsComponent } from './treatments/treatments.component';
     MatInputModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    MatCheckboxModule,
   ],
   providers: [
     PatientsService
